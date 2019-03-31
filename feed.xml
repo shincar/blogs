@@ -1,4 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://shincar.github.io/blogs/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shincar.github.io/blogs/" rel="alternate" type="text/html" /><updated>2019-03-31T09:10:45+08:00</updated><id>https://shincar.github.io/blogs/feed.xml</id><title type="html">Adam &amp;amp; Alvin’s Fun Lab</title><subtitle>A SECRET PLACE FOR FUN PROJECTS</subtitle><entry><title type="html">打造一個線上board game平台 - Part 2</title><link href="https://shincar.github.io/blogs/2019-03-28-shincar-game-base-part-2" rel="alternate" type="text/html" title="打造一個線上board game平台 - Part 2" /><published>2019-03-28T02:00:00+08:00</published><updated>2019-03-28T02:00:00+08:00</updated><id>https://shincar.github.io/blogs/shincar-game-base-part-2</id><content type="html" xml:base="https://shincar.github.io/blogs/2019-03-28-shincar-game-base-part-2">&lt;p&gt;有了計畫要寫一個通用的遊戲大廳之後，就開始想像整個流程。一個玩家進到大廳，網站就需要他輸入使用者名稱。不管是在聊天室裡打屁，還是開遊戲對戰室，都會有這個需求。之後如果要新增一些功能，遲早要建立使用者管理系統。那就趁早在規畫時期把地基打穩吧！&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://shincar.github.io/blogs/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shincar.github.io/blogs/" rel="alternate" type="text/html" /><updated>2019-03-31T09:31:01+08:00</updated><id>https://shincar.github.io/blogs/feed.xml</id><title type="html">Adam &amp;amp; Alvin’s Fun Lab</title><subtitle>A SECRET PLACE FOR FUN PROJECTS</subtitle><entry><title type="html">在jekyll首頁加入分頁功能</title><link href="https://shincar.github.io/blogs/2019-03-30-add-pagination-to-blog" rel="alternate" type="text/html" title="在jekyll首頁加入分頁功能" /><published>2019-03-30T02:00:00+08:00</published><updated>2019-03-30T02:00:00+08:00</updated><id>https://shincar.github.io/blogs/add-pagination-to-blog</id><content type="html" xml:base="https://shincar.github.io/blogs/2019-03-30-add-pagination-to-blog">&lt;p&gt;在加入分類功能之後，下一件blogs常有的功能就是分頁。原本在jekyll裡加入分頁的功能應該是蠻容易的。但是要在github上也能運作，就變的有點複雜。&lt;/p&gt;
+
+&lt;p&gt;主要是因為我為了整理方便，在每篇post的Front Matter都有加permalink。結果原本的pagination plugin不支援，只好找替代方案。找到一個jekyll-paginate-v2，但是在github上不支援。看到一個解決方案是只接把jekyll build的output放到github上。&lt;/p&gt;
+
+&lt;p&gt;所以現在blogs.git變成只放_site裡的東東。
+新開一個blog-source.git放jekyll的原始碼。&lt;/p&gt;
+
+&lt;p&gt;要寫什麼東東都跟以前一樣，但是要發佈到github上的時候，要切到_site目錄把內容push到blogs.git裡。呼～ 有點麻煩，但是至少是完成了。&lt;/p&gt;</content><author><name>adam</name></author><summary type="html">在加入分類功能之後，下一件blogs常有的功能就是分頁。原本在jekyll裡加入分頁的功能應該是蠻容易的。但是要在github上也能運作，就變的有點複雜。</summary></entry><entry><title type="html">打造一個線上board game平台 - Part 2</title><link href="https://shincar.github.io/blogs/2019-03-28-shincar-game-base-part-2" rel="alternate" type="text/html" title="打造一個線上board game平台 - Part 2" /><published>2019-03-28T02:00:00+08:00</published><updated>2019-03-28T02:00:00+08:00</updated><id>https://shincar.github.io/blogs/shincar-game-base-part-2</id><content type="html" xml:base="https://shincar.github.io/blogs/2019-03-28-shincar-game-base-part-2">&lt;p&gt;有了計畫要寫一個通用的遊戲大廳之後，就開始想像整個流程。一個玩家進到大廳，網站就需要他輸入使用者名稱。不管是在聊天室裡打屁，還是開遊戲對戰室，都會有這個需求。之後如果要新增一些功能，遲早要建立使用者管理系統。那就趁早在規畫時期把地基打穩吧！&lt;/p&gt;
 
 &lt;p&gt;在做&lt;a href=&quot;https://shincar.appspot.com/&quot;&gt;Winstons &amp;amp; Ohnoes&lt;/a&gt;的網路對戰功能時，把後端資料庫掛在Google Cloud Datastore上。那時就有看到&lt;a href=&quot;https://firebase.google.com&quot;&gt;Google Firebase&lt;/a&gt;。但是當時看了一下實作的細節，覺得好像要花一些時間了解才比較能上手，所以就回頭去用舊有的Google Cloud Datastore先完成再說。效果確實也不錯。&lt;/p&gt;
 
@@ -250,29 +257,4 @@
 &lt;p&gt;它預設的說明是建議你每個post都加comments: true來決定要不要秀出留言系統。我自己是在_layouts\post.html裡也加了comments: true
 這樣的好處是如果我要直接關閉整個留言系統，直接改_layouts\post.html就可以了。&lt;/p&gt;
 
-&lt;p&gt;立馬去&lt;a href=&quot;https://shincar.github.io/blogs/2019-01-29-my-first-game&quot;&gt;第一篇&lt;/a&gt;文章頭推試試，看來沒問題！讚啦～&lt;/p&gt;</content><author><name>adam</name></author><summary type="html">寫了那麼多篇文章，當然是希望哪天有人看到。為了讓來看的人有機會留下足跡，或是對文章的內容提出疑問。所以有個留言板也是很正常的。</summary></entry><entry><title type="html">在Google App Engine中，Winstons &amp;amp; Ohnoes無法載入，原因出在PNG檔</title><link href="https://shincar.github.io/blogs/2019-02-25-fixed-winston-and-ohnoes-issue-on-gae" rel="alternate" type="text/html" title="在Google App Engine中，Winstons &amp; Ohnoes無法載入，原因出在PNG檔" /><published>2019-02-25T02:00:00+08:00</published><updated>2019-02-25T02:00:00+08:00</updated><id>https://shincar.github.io/blogs/fixed-winston-and-ohnoes-issue-on-gae</id><content type="html" xml:base="https://shincar.github.io/blogs/2019-02-25-fixed-winston-and-ohnoes-issue-on-gae">&lt;p&gt;原本正興高采烈的實作Winstons &amp;amp; Ohnoes的網路對戰功能，卻突然發現host在GAE的Winstons &amp;amp; Ohnoes根本沒辦法玩。比對了一下在github裡的程式碼跟在GAE裡的完全一樣，但在GAE裡的硬是load不出來。就只好開始debug了。&lt;/p&gt;
-
-&lt;p&gt;使用Google Chrome內建的Inspect工具，查看程式碼有沒有完整的下載成功，結果是有的。怪！看了半天都看不出來，只好用分解法，把可以簡化的宣告跟函式都先去掉。一點一點增加程式碼，看看是加到哪邊的時候會壞掉。&lt;/p&gt;
-
-&lt;p&gt;簡化到只畫homeScene時就壞了，算是好消息。只要能把homeScene畫出來，可能問題就解了。畫homeScene時，總共做了以下幾件事：&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;初始化畫布&lt;/li&gt;
-  &lt;li&gt;畫背景&lt;/li&gt;
-  &lt;li&gt;畫player1.image跟player2.image&lt;/li&gt;
-  &lt;li&gt;畫標題&lt;/li&gt;
-  &lt;li&gt;畫兩個按鈕&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;檢查到3.時發現是image在做怪，當ProcessJS試著預載圖檔時，沒辦法成功。所以就卡在那了。&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;cm&quot;&gt;/* @pjs preload=&quot;images/cs-winston.png, images/cs-ohnoes.png&quot;; */&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;剛好在github裡有絕對路徑的圖檔URL可以用，就拿來試試看&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;cm&quot;&gt;/* @pjs preload=&quot;https://shincar.github.io/games/images/cs-winston.png,https://shincar.github.io/games/images/cs-ohnoes.png&quot;; */&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;一試成功，結論就是它啦！終於可以繼續搞網路對戰功能了～ 嚇死老狗啊～&lt;/p&gt;
-
-&lt;p&gt;原始碼看&lt;a href=&quot;https://github.com/shincar/WinstonsNOhnoes_v2&quot;&gt;這裡&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;網路上有另一個解法是在app.yaml裡加入handlers把圖檔在GAE環境裡的位置指對。詳細可以看這份&lt;a href=&quot;https://cloud.google.com/appengine/docs/standard/nodejs/config/appref#handlers_element&quot;&gt;文件&lt;/a&gt;。&lt;/p&gt;</content><author><name>adam</name></author><summary type="html">原本正興高采烈的實作Winstons &amp;amp; Ohnoes的網路對戰功能，卻突然發現host在GAE的Winstons &amp;amp; Ohnoes根本沒辦法玩。比對了一下在github裡的程式碼跟在GAE裡的完全一樣，但在GAE裡的硬是load不出來。就只好開始debug了。</summary></entry></feed>
+&lt;p&gt;立馬去&lt;a href=&quot;https://shincar.github.io/blogs/2019-01-29-my-first-game&quot;&gt;第一篇&lt;/a&gt;文章頭推試試，看來沒問題！讚啦～&lt;/p&gt;</content><author><name>adam</name></author><summary type="html">寫了那麼多篇文章，當然是希望哪天有人看到。為了讓來看的人有機會留下足跡，或是對文章的內容提出疑問。所以有個留言板也是很正常的。</summary></entry></feed>

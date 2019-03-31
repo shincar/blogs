@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Adam & Alvin's Fun Lab -  - page 2</title>
+  <title>Adam & Alvin's Fun Lab - 在jekyll首頁加入分頁功能</title>
   <link rel="stylesheet" href="/blogs/assets/css/style.css" type="text/css">
   <link rel="stylesheet" href="/blogs/assets/css/syntax.css" type="text/css">
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -50,84 +50,41 @@
 
     <div id="content">
         <div id="left">
-        
-  <h3 class="ttl"><a href="/blogs/2019-03-13-add-a-lobby-to-winstons-n-ohnoes-v3">在Winstons & Ohnoes裡加入新的遊戲大廳</a></h3>
-  <h4 class="info">Post by adam at 2019-03-13</h4>
-  <div>
-  
-    <p>在完成網路對戰功能之，原本的介面不太方便讓玩家二加入遊戲。所以有了遊戲大廳的想法。玩家一開始可以先進大廳，看看現在有沒有人開著遊戲在等，或是直接新增一個遊戲。</p>
+        <h3 class="ttl">在jekyll首頁加入分頁功能</h3>
+<h4 class="info">Post by adam at 2019-03-30</h4>
+<p>在加入分類功能之後，下一件blogs常有的功能就是分頁。原本在jekyll裡加入分頁的功能應該是蠻容易的。但是要在github上也能運作，就變的有點複雜。</p>
+
+<p>主要是因為我為了整理方便，在每篇post的Front Matter都有加permalink。結果原本的pagination plugin不支援，只好找替代方案。找到一個jekyll-paginate-v2，但是在github上不支援。看到一個解決方案是只接把jekyll build的output放到github上。</p>
+
+<p>所以現在blogs.git變成只放_site裡的東東。
+新開一個blog-source.git放jekyll的原始碼。</p>
+
+<p>要寫什麼東東都跟以前一樣，但是要發佈到github上的時候，要切到_site目錄把內容push到blogs.git裡。呼～ 有點麻煩，但是至少是完成了。</p>
+
+<div class="fb-like" data-href="https://shincar.github.io/blogs/2019-03-30-add-pagination-to-blog" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
 
 
-  
-  </div>
-  <div class="read-more"><a href="/blogs/2019-03-13-add-a-lobby-to-winstons-n-ohnoes-v3">繼續閱讀</a></div>
 
-  <h3 class="ttl"><a href="/blogs/2019-03-13-shincar-game-is-coming">打造一個線上board game平台 - Part 1</a></h3>
-  <h4 class="info">Post by adam at 2019-03-13</h4>
-  <div>
-  
-    <p>為了幫Winstons &amp; Ohnoes打造一個遊戲大廳，又帶出我另一個想法（人生就是一直充滿變化），何不寫一個能夠讓我一直加入新遊戲的通用大廳？把<a href="https://reactjs.org/docs/thinking-in-react.html">Think in React</a>看完之後，我認真的覺得要弄出一個大廳不會太困難。只要先規畫好前端要秀出來的元件，再一個一個完成，應該能在有生之年完成。要完成任何事的先決要件就是動起來，把一件大事切成很多件小事。一件一件完成，最後就會完成了。</p>
+<div id="disqus_thread"></div>
+<script>
 
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
 
-  
-  </div>
-  <div class="read-more"><a href="/blogs/2019-03-13-shincar-game-is-coming">繼續閱讀</a></div>
+var disqus_config = function () {
+  this.page.url = 'https://shincar.github.io/blogs/2019-03-30-add-pagination-to-blog';  // Replace PAGE_URL with your page's canonical URL variable
+  this.page.identifier = '/2019-03-30-add-pagination-to-blog'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
 
-  <h3 class="ttl"><a href="/blogs/2019-03-07-winstons-and-ohnoes-v3">Winstons & Ohnoesd大改版！</a></h3>
-  <h4 class="info">Post by adam at 2019-03-07</h4>
-  <div>
-  
-    <p>噹！噹！噹！最新一版的Winstons &amp; Ohnoes出爐啦！</p>
-
-
-  
-  </div>
-  <div class="read-more"><a href="/blogs/2019-03-07-winstons-and-ohnoes-v3">繼續閱讀</a></div>
-
-  <h3 class="ttl"><a href="/blogs/2019-03-01-winstons-and-ohnoes-now-support-network-battling">Winstons & Ohnoes現在支援網路對戰囉！</a></h3>
-  <h4 class="info">Post by adam at 2019-03-01</h4>
-  <div>
-  
-    <p>經過幾天的努力，現在Winstons &amp; Ohnoes終於可以支援網路對戰啦！萬歲！
-<img src="/blogs/images/WinstonNOhnoesv2_main.png" alt="主畫面" width="500px" /></p>
-
-
-  
-  </div>
-  <div class="read-more"><a href="/blogs/2019-03-01-winstons-and-ohnoes-now-support-network-battling">繼續閱讀</a></div>
-
-  <h3 class="ttl"><a href="/blogs/2019-02-25-fixed-winston-and-ohnoes-issue-on-gae">在Google App Engine中，Winstons & Ohnoes無法載入，原因出在PNG檔</a></h3>
-  <h4 class="info">Post by adam at 2019-02-25</h4>
-  <div>
-  
-    <p>原本正興高采烈的實作Winstons &amp; Ohnoes的網路對戰功能，卻突然發現host在GAE的Winstons &amp; Ohnoes根本沒辦法玩。比對了一下在github裡的程式碼跟在GAE裡的完全一樣，但在GAE裡的硬是load不出來。就只好開始debug了。</p>
-
-
-  
-  </div>
-  <div class="read-more"><a href="/blogs/2019-02-25-fixed-winston-and-ohnoes-issue-on-gae">繼續閱讀</a></div>
-
-<!-- 
-    Showing buttons to move to the next and to the previous list of posts (pager buttons).
--->
-<hr />
-
-<div class="pager">
-    
-    <div class="previous">
-        <a href="/blogs/index.html">
-          &larr; 上一頁
-        </a>
-    </div>
-    
-    
-    <div class="next">
-        <a href="/blogs/page/3/index.html">
-          下一頁 &rarr;
-        </a>
-    </div>
-    
-</div>
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://adam-alvins-fun-lab.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
 
         </div>
